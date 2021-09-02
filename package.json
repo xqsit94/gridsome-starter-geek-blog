@@ -16,6 +16,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/vue-remark": "^0.2.6",
     "@vssue/api-github-v4": "^1.4.7",
+    "fuse.js": "^6.4.6",
     "gh-pages": "^3.2.3",
     "gridsome": "^0.7.0",
     "gridsome-plugin-recommender": "^1.1.5",
@@ -24,7 +25,6 @@
     "gridsome-plugin-rss": "^1.2.0",
     "remark-attr": "^0.11.1",
     "vssue": "^1.4.8",
-    "vue-fuse": "^3.0.2",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

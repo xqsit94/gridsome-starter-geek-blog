@@ -5303,7 +5303,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-fuse.js@^6.4.4:
+fuse.js@^6.4.6:
   version "6.4.6"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-6.4.6.tgz#62f216c110e5aa22486aff20be7896d19a059b79"
   integrity sha512-/gYxR/0VpXmWSfZOIPS3rWwU8SHgsRTwWuXhyb2O6s7aRuVtHtxCkR33bNYu3wyLyNx/Wpv0vU7FZy8Vj53VNw==
@@ -12099,13 +12099,6 @@ vue-eslint-parser@^7.10.0:
     esquery "^1.4.0"
     lodash "^4.17.21"
     semver "^6.3.0"
-
-vue-fuse@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-3.0.2.tgz#3fafb2933fbbf42aecbeb7b824a382edbc753c29"
-  integrity sha512-p9a4ZWGCIrb76VGRofbg3CnxOIAfDBjbimjTqKbeY1/rChm26Tvq0+BhHAA/8Fn42eLN5nuuFEJ4mScvRUfqRw==
-  dependencies:
-    fuse.js "^6.4.4"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

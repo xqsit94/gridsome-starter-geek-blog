@@ -4,15 +4,23 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import GlobalMixin from '~/mixins/GlobalMixin'
 import Vssue from 'vssue'
+import Fuse from 'fuse.js'
 import GithubV4 from '@vssue/api-github-v4'
-import VueFuse from 'vue-fuse'
 import 'vssue/dist/vssue.css'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.mixin(GlobalMixin)
-  Vue.use(VueFuse)
+
+  Vue.prototype.$search = function (term, list, options) {
+    return new Promise(function (resolve, reject) {
+      const run = new Fuse(list, options)
+      const results = run.search(term)
+      resolve(results)
+    })
+  }
+
   Vue.use(Vssue, {
     api: GithubV4,
     owner: process.env.GRIDSOME_VSSUE_OWNER,
