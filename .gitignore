@@ -1,0 +1,9 @@
+.idea
+*.log
+.cache
+.DS_Store
+src/.temp
+static/rss.xml
+node_modules
+dist
+.env

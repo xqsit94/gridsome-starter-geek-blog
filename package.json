@@ -1,0 +1,41 @@
+{
+  "name": "geek-blog",
+  "private": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build",
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "@gridsome/vue-remark": "^0.2.6",
+    "@vssue/api-github-v4": "^1.4.7",
+    "gh-pages": "^3.2.3",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-recommender": "^1.1.5",
+    "gridsome-plugin-remark-shiki": "^0.6.0",
+    "gridsome-plugin-robots-txt": "^1.0.2",
+    "gridsome-plugin-rss": "^1.2.0",
+    "remark-attr": "^0.11.1",
+    "vssue": "^1.4.8",
+    "vue-fuse": "^3.0.2",
+    "vue-scrollto": "^2.20.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "gridsome-plugin-windicss": "^1.0.3",
+    "prettier": "^2.3.2"
+  }
+}
