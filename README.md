@@ -27,6 +27,7 @@
 - and more in future maybe 🥳
 
 ## Todo
+- VSSUE update css for dark theme support (pull-request is appreciated 😝 )
 - Update README.md with Installation
 
 ## Demo URL
