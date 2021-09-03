@@ -23,10 +23,10 @@
 - [x] SEO Friendly
 - [x] Sitemap
 - [x] RSS Feed
+- [x] TOC
 - and more in future maybe 🥳
 
 ## Todo
-- [ ] TOC
 - [ ] Fix VSSUE issue in styles (pullrequest are appreciated 😜)
 
 ## Demo URL

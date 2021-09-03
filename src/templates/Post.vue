@@ -1,13 +1,23 @@
 <template>
   <Layout>
     <div class="container px-5 py-8 mx-auto flex flex-wrap">
-      <aside class="w-full md:w-1/7 sm:w-0 flex flex-col pr-3">
-        <div class="w-full flex flex-col my-4">
-          <p class="text-base font-semibold pb-5">Ads</p>
+      <aside
+        class="
+          w-full
+          md:w-1/7
+          sm:w-0
+          flex flex-col
+          pr-5
+          border-r-1 border-gray-300
+          dark:border-gray-700
+        "
+      >
+        <div class="w-full flex flex-col sticky top-5">
+          <table-of-content />
         </div>
       </aside>
 
-      <section class="w-full md:w-4/7 flex flex-col px-3">
+      <section class="w-full md:w-4/7 flex flex-col px-10">
         <g-image
           class="mb-8"
           v-if="$page.post.thumbnail"
@@ -99,7 +109,16 @@
         <Vssue :title="$page.post.title" />
       </section>
 
-      <aside class="w-full md:w-2/7 flex flex-col pl-3">
+      <aside
+        class="
+          w-full
+          md:w-2/7
+          flex flex-col
+          pl-6
+          border-l-1 border-gray-300
+          dark:border-gray-700
+        "
+      >
         <app-sidebar />
       </aside>
     </div>
@@ -115,6 +134,11 @@ query Post ($path: String!) {
     path
     date (format: "MMMM D, Y")
     content
+    headings {
+      depth
+      value
+      anchor
+    }
     categories {
       id
       path
@@ -189,6 +213,7 @@ export default {
   components: {
     AppSidebar: () => import('~/components/parts/AppSidebar'),
     RelatedPost: () => import('~/components/RelatedPost'),
+    TableOfContent: () => import('~/components/TableOfContent'),
   },
 
   computed: {

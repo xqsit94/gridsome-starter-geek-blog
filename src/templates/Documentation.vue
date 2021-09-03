@@ -12,7 +12,16 @@
             </div>
           </div>
         </div>
-        <aside class="w-full md:w-1/3 flex flex-col px-6">
+        <aside
+          class="
+            w-full
+            md:w-1/3
+            flex flex-col
+            pl-6
+            border-l-1 border-gray-300
+            dark:border-gray-700
+          "
+        >
           <app-sidebar />
         </aside>
       </div>
