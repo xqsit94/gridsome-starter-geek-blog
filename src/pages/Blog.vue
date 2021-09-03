@@ -18,7 +18,19 @@
           />
         </div>
 
-        <aside class="w-full md:w-1/3 flex flex-col px-6">
+        <aside
+          class="
+            w-full
+            md:w-1/3
+            flex flex-col
+            pl-2
+            pr-2
+            mt-5
+            md:mt-0 md:pr-0 md:pl-6 md:border-l-1
+            border-gray-300
+            dark:border-gray-700
+          "
+        >
           <app-sidebar />
         </aside>
       </div>

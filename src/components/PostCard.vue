@@ -3,7 +3,7 @@
     class="
       h-full
       overflow-hidden
-      space-x-4
+      md:space-x-4
       text-gray-700
       rounded-lg
       shadow-xl
@@ -58,9 +58,8 @@
             <path d="M12 5l7 7-7 7"></path>
           </svg>
         </g-link>
-        <span
+        <div
           class="
-            mr-3
             inline-flex
             items-center
             lg:ml-auto
@@ -68,15 +67,16 @@
             ml-auto
             leading-none
             text-sm
-            pr-3
-            py-1
-            border-r-2 border-gray-200
+            mt-5
+            md:mt-0
           "
-          >{{ post.node.date }}</span
         >
-        <span class="inline-flex items-center leading-none text-sm"
-          >{{ post.node.timeToRead }} min read</span
-        >
+          <span class="border-r-2 border-gray-200 px-3 mr-3">{{
+            post.node.date
+          }}</span>
+          <span class="mr-3">☕</span>
+          <span>{{ post.node.timeToRead }} min read</span>
+        </div>
       </div>
     </div>
   </div>

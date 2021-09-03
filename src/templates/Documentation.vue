@@ -3,7 +3,7 @@
     <section class="body-font">
       <div class="container mx-auto flex flex-wrap py-8">
         <div class="w-full md:w-2/3 flex flex-col">
-          <div class="markdown-body pr-10">
+          <div class="markdown-body pl-2 pr-2 md:pr-10">
             <h1 class="text-3xl font-bold mb-7">
               {{ $page.documentation.title }}
             </h1>
@@ -17,8 +17,10 @@
             w-full
             md:w-1/3
             flex flex-col
-            pl-6
-            border-l-1 border-gray-300
+            pl-2
+            pr-2
+            md:pr-0 md:pl-6 md:border-l-1
+            border-gray-300
             dark:border-gray-700
           "
         >

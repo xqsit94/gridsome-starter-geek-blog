@@ -8,6 +8,8 @@
           sm:w-0
           flex flex-col
           pr-5
+          hidden
+          sm:block
           border-r-1 border-gray-300
           dark:border-gray-700
         "
@@ -17,7 +19,7 @@
         </div>
       </aside>
 
-      <section class="w-full md:w-4/7 flex flex-col px-10">
+      <section class="w-full md:w-4/7 flex flex-col px-2 md:px-10">
         <g-image
           class="mb-8"
           v-if="$page.post.thumbnail"
@@ -36,7 +38,7 @@
           <span v-else title="CATEGORY">
             {{ parentCategory($page.post.categories) }}
           </span>
-          - {{ $page.post.date }}
+          -️ {{ $page.post.date }}
         </div>
         <div class="markdown-body mb-8" v-html="$page.post.content" />
         <div class="flex mb-8 text-sm">
@@ -114,8 +116,10 @@
           w-full
           md:w-2/7
           flex flex-col
-          pl-6
-          border-l-1 border-gray-300
+          pl-2
+          pr-2
+          md:pr-0 md:pl-6 md:border-l-1
+          border-gray-300
           dark:border-gray-700
         "
       >
