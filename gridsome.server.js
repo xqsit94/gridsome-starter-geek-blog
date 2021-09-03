@@ -6,20 +6,20 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource((store) => {
+  api.loadSource(({ addMetadata, addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 
-    store.addMetadata(
+    addMetadata(
       'siteTitle',
       process.env.SITE_TITLE || 'Technology Guide, Tips, HowTo, Coding etc'
     )
-    store.addMetadata('siteAuthor', process.env.SITE_AUTHOR || 'xqsit94')
-    store.addMetadata(
+    addMetadata('siteAuthor', process.env.SITE_AUTHOR || 'xqsit94')
+    addMetadata(
       'siteAuthorUrl',
       process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94"'
     )
 
-    const category = store.addCollection('Category')
+    const category = addCollection('Category')
     category.addReference('categories', 'Category')
   })
 

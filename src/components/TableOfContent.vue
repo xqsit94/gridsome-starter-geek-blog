@@ -81,11 +81,13 @@ export default {
         this.activeAnchor = window.location.hash
       }
 
-      // Clear the current observer.
-      this.observer.disconnect()
+      if (this.observer) {
+        // Clear the current observer.
+        this.observer.disconnect()
 
-      // And create another one for the next page.
-      this.$nextTick(this.initObserver)
+        // And create another one for the next page.
+        this.$nextTick(this.initObserver)
+      }
     },
   },
 
