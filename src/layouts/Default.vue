@@ -146,11 +146,13 @@ export default {
     return {
       theme: '',
       isOpen: false,
-      menuItems: [{
-        key: 'blog',
-        name: 'Blog',
-        to: '/blog/'
-      }]
+      menuItems: [
+        {
+          key: 'blog',
+          name: 'Blog',
+          to: '/blog/',
+        },
+      ],
     }
   },
   methods: {

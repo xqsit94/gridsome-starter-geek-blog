@@ -11,12 +11,12 @@ module.exports = function (api) {
 
     store.addMetadata(
       'siteTitle',
-      process.env.SITE_TITLE ?? 'Technology Guide, Tips, HowTo, Coding etc'
+      process.env.SITE_TITLE || 'Technology Guide, Tips, HowTo, Coding etc'
     )
-    store.addMetadata('siteAuthor', process.env.SITE_AUTHOR ?? 'xqsit94')
+    store.addMetadata('siteAuthor', process.env.SITE_AUTHOR || 'xqsit94')
     store.addMetadata(
       'siteAuthorUrl',
-      process.env.SITE_AUTHOR_URL ?? 'https://github.com/xqsit94"'
+      process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94"'
     )
 
     const category = store.addCollection('Category')

@@ -5,14 +5,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: process.env.SITE_NAME ?? 'Geek Blog',
+  siteName: process.env.SITE_NAME || 'Geek Blog',
   siteDescription:
-    process.env.SITE_DESCRIPTION ??
+    process.env.SITE_DESCRIPTION ||
     'Geek Blog covers Technologies, Apps, Games, Tips and Tricks, How to, Linux, Windows, Blogging, Programming etc.',
-  siteUrl: process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com',
+  siteUrl: process.env.GRIDSOME_BASE_URL || 'https://xqsit94.github.com',
   icon: {
     favicon: {
-      src: process.env.SITE_FAVICON_PATH ?? './static/images/favicon.png',
+      src: process.env.SITE_FAVICON_PATH || './static/images/favicon.png',
       sizes: [16, 32, 96],
     },
   },
@@ -61,13 +61,13 @@ module.exports = {
         contentTypeName: 'Post',
         feedOptions: {
           title:
-            process.env.SITE_TITLE ??
+            process.env.SITE_TITLE ||
             'Geek Blog | Technology Guide, Tips, HowTo, Coding etc.',
           feed_url: process.env.GRIDSOME_BASE_URL
             ? `${process.env.GRIDSOME_BASE_URL}/rss.xml`
             : 'https://xqsit94.github.com/rss.xml',
           site_url:
-            process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com/',
+            process.env.GRIDSOME_BASE_URL || 'https://xqsit94.github.com/',
         },
         feedItemOptions: (node) => ({
           title: node.title,
@@ -75,7 +75,7 @@ module.exports = {
           url: process.env.GRIDSOME_BASE_URL
             ? process.env.GRIDSOME_BASE_URL + node.path
             : 'https://xqsit94.github.com' + node.path,
-          author: process.env.SITE_AUTHOR ?? 'Manikandan (xqsit94)',
+          author: process.env.SITE_AUTHOR || 'Manikandan (xqsit94)',
           date: node.date,
         }),
         output: {

@@ -27,7 +27,7 @@ export default function (Vue, { router, head, isClient }) {
     repo: process.env.GRIDSOME_VSSUE_REPO,
     clientId: process.env.GRIDSOME_VSSUE_CLIENT_ID,
     clientSecret: process.env.GRIDSOME_VSSUE_CLIENT_SECRET,
-    perPage: process.env.VSSUE_GRIDSOME_PERPAGE ?? 15,
-    autoCreateIssue: process.env.GRIDSOME_VSSUE_OWNER ?? false,
+    perPage: process.env.VSSUE_GRIDSOME_PERPAGE || 15,
+    autoCreateIssue: process.env.GRIDSOME_VSSUE_OWNER || false,
   })
 }
