@@ -9,7 +9,7 @@ module.exports = {
   siteDescription:
     process.env.SITE_DESCRIPTION ??
     'Geek Blog covers Technologies, Apps, Games, Tips and Tricks, How to, Linux, Windows, Blogging, Programming etc.',
-  siteUrl: process.env.SITE_URL ?? 'https://xqsit94.github.com',
+  siteUrl: process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com',
   icon: {
     favicon: {
       src: process.env.SITE_FAVICON_PATH ?? './static/images/favicon.png',
@@ -63,16 +63,16 @@ module.exports = {
           title:
             process.env.SITE_TITLE ??
             'Geek Blog | Technology Guide, Tips, HowTo, Coding etc.',
-          feed_url: process.env.SITE_URL
-            ? `${process.env.SITE_URL}/rss.xml`
+          feed_url: process.env.GRIDSOME_BASE_URL
+            ? `${process.env.GRIDSOME_BASE_URL}/rss.xml`
             : 'https://xqsit94.github.com/rss.xml',
-          site_url: process.env.SITE_URL ?? 'https://xqsit94.github.com/',
+          site_url: process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com/',
         },
         feedItemOptions: (node) => ({
           title: node.title,
           description: node.summary,
-          url: process.env.SITE_URL
-            ? process.env.SITE_URL + node.path
+          url: process.env.GRIDSOME_BASE_URL
+            ? process.env.GRIDSOME_BASE_URL + node.path
             : 'https://xqsit94.github.com' + node.path,
           author: process.env.SITE_AUTHOR ?? 'Manikandan (xqsit94)',
           date: node.date,
