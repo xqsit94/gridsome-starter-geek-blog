@@ -27,7 +27,7 @@
 - and more in future maybe 🥳
 
 ## Todo
-- [ ] Fix VSSUE issue in styles (pullrequest are appreciated 😜)
+- Update README.md with Installation
 
 ## Demo URL
 https://codedine.com

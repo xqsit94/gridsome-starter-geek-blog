@@ -6,7 +6,6 @@ import GlobalMixin from '~/mixins/GlobalMixin'
 import Vssue from 'vssue'
 import Fuse from 'fuse.js'
 import GithubV4 from '@vssue/api-github-v4'
-import 'vssue/dist/vssue.css'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component

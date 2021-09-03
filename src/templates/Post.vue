@@ -106,7 +106,7 @@
           <related-post :posts="$page.post.related"></related-post>
         </div>
 
-        <Vssue :title="$page.post.title" />
+        <post-comment :title="$page.post.title" />
       </section>
 
       <aside
@@ -213,6 +213,7 @@ export default {
   components: {
     AppSidebar: () => import('~/components/parts/AppSidebar'),
     RelatedPost: () => import('~/components/RelatedPost'),
+    PostComment: () => import('~/components/PostComment'),
     TableOfContent: () => import('~/components/TableOfContent'),
   },
 

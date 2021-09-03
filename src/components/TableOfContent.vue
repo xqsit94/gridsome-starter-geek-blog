@@ -71,7 +71,6 @@ export default {
       return this.$page.post
     },
     headings() {
-      console.log('page head', this.$page.post)
       return this.page.headings.filter((h) => h.depth > 1)
     },
   },
