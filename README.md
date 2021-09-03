@@ -24,6 +24,7 @@
 - [x] Sitemap
 - [x] RSS Feed
 - [x] TOC
+- [x] Google Analytics
 - and more in future maybe 🥳
 
 ## Todo

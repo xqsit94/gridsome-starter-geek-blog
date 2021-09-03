@@ -109,6 +109,14 @@ module.exports = {
         debug: false,
       },
     },
+    {
+      use: 'gridsome-plugin-gtag',
+      options: {
+        config: {
+          id: process.env.GOOGLE_ANALYTICS_ID,
+        },
+      },
+    },
   ],
   templates: {
     Tag: '/tag/:id',
