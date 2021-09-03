@@ -110,7 +110,9 @@
 query Post ($path: String!) {
   post: post (path: $path) {
     title
+    summary
     thumbnail
+    path
     date (format: "MMMM D, Y")
     content
     categories {
@@ -132,17 +134,75 @@ query Post ($path: String!) {
 }
 </page-query>
 
+<static-query>
+query {
+  metadata {
+    siteTitle
+    siteDescription
+    siteAuthor
+  }
+}
+</static-query>
+
 <script>
 export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.post.summary,
+        },
+        { name: 'description', content: this.$page.post.summary },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: this.$page.post.summary },
+        { name: 'twitter:title', content: this.$page.post.title },
+        {
+          name: 'twitter:site',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        { name: 'twitter:image', content: this.getThumbnailImage },
+        {
+          name: 'twitter:creator',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: this.$page.post.title },
+        { property: 'og:description', content: this.$page.post.summary },
+        {
+          property: 'og:url',
+          content: `${this.getBaseUrl}${this.$page.post.path}/`,
+        },
+        {
+          property: 'article:published_time',
+          content: this.$page.post.date,
+        },
+        { property: 'og:updated_time', content: this.$page.post.date },
+        { property: 'og:image', content: this.getThumbnailImage },
+        { property: 'og:image:secure_url', content: this.getThumbnailImage },
+      ],
     }
   },
 
   components: {
     AppSidebar: () => import('~/components/parts/AppSidebar'),
     RelatedPost: () => import('~/components/RelatedPost'),
+  },
+
+  computed: {
+    getThumbnailImage() {
+      let thumbnailImage = `${this.getBaseUrl}/default-thumb.png`
+      const cover = this.$page.post.thumbnail
+      if (cover != null) {
+        thumbnailImage = `${this.getBaseUrl}${this.$page.post.thumbnail.src}`
+      }
+      return thumbnailImage
+    },
+    getBaseUrl() {
+      return process.env.GRIDSOME_BASE_URL
+    },
   },
 }
 </script>

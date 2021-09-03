@@ -24,17 +24,72 @@
 <page-query>
 query Documentation ($id: ID!) {
   documentation(id: $id) {
+    path
     title
     excerpt
   }
 }
 </page-query>
 
+<static-query>
+query {
+  metadata {
+    siteTitle
+    siteDescription
+    siteAuthor
+  }
+}
+</static-query>
+
 <script>
 export default {
   metaInfo() {
     return {
       title: this.$page.documentation.title,
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.documentation.excerpt,
+        },
+        { name: 'description', content: this.$page.documentation.excerpt },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:description',
+          content: this.$page.documentation.excerpt,
+        },
+        { name: 'twitter:title', content: this.$page.documentation.title },
+        {
+          name: 'twitter:site',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        {
+          name: 'twitter:image',
+          content: `${this.getBaseUrl}/default-thumb.png`,
+        },
+        {
+          name: 'twitter:creator',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        { property: 'og:type', content: 'document' },
+        { property: 'og:title', content: this.$page.documentation.title },
+        {
+          property: 'og:description',
+          content: this.$page.documentation.excerpt,
+        },
+        {
+          property: 'og:url',
+          content: `${this.getBaseUrl}${this.$page.documentation.path}/`,
+        },
+        {
+          property: 'og:image',
+          content: `${this.getBaseUrl}/default-thumb.png`,
+        },
+        {
+          property: 'og:image:secure_url',
+          content: `${this.getBaseUrl}/default-thumb.png`,
+        },
+      ],
     }
   },
 

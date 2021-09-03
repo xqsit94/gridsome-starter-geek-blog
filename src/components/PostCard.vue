@@ -10,7 +10,7 @@
       dark:bg-gray-800 dark:text-gray-300
     "
   >
-    <g-link :to="post.node.path" class="text-copy-primary">
+    <g-link :to="`${post.node.path}/`" class="text-copy-primary">
       <g-image
         class="lg:h-48 md:h-36 w-full object-cover object-center"
         :src="
@@ -35,14 +35,14 @@
         {{ parentCategory(post.node.categories) }}
       </h2>
       <h1 class="title-font text-xl font-medium text-gray-900 mb-3">
-        <g-link :to="post.node.path" class="text-copy-primary">
+        <g-link :to="`${post.node.path}/`" class="text-copy-primary">
           {{ post.node.title }}
         </g-link>
       </h1>
       <p class="leading-relaxed mb-3">{{ post.node.summary }}</p>
       <div class="flex items-center flex-wrap">
         <g-link
-          :to="post.node.path"
+          :to="`${post.node.path}/`"
           class="text-pink-500 inline-flex items-center md:mb-2 lg:mb-0"
           >Read More
           <svg

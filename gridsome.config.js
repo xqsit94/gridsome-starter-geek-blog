@@ -66,7 +66,8 @@ module.exports = {
           feed_url: process.env.GRIDSOME_BASE_URL
             ? `${process.env.GRIDSOME_BASE_URL}/rss.xml`
             : 'https://xqsit94.github.com/rss.xml',
-          site_url: process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com/',
+          site_url:
+            process.env.GRIDSOME_BASE_URL ?? 'https://xqsit94.github.com/',
         },
         feedItemOptions: (node) => ({
           title: node.title,

@@ -69,6 +69,8 @@ query Posts {
 query {
   metadata {
     siteTitle
+    siteDescription
+    siteAuthor
   }
 }
 </static-query>
@@ -78,6 +80,50 @@ export default {
   metaInfo() {
     return {
       title: this.$static.metadata.siteTitle,
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$static.metadata.siteDescription,
+        },
+        { name: 'author', content: this.$static.metadata.siteAuthor },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:description',
+          content: this.$static.metadata.siteDescription,
+        },
+        { name: 'twitter:title', content: this.$static.metadata.siteTitle },
+        {
+          name: 'twitter:site',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        {
+          name: 'twitter:image',
+          content: `${process.env.GRIDSOME_BASE_URL}/images/default-thumb.png`,
+        },
+        {
+          name: 'twitter:creator',
+          content: `@${this.$static.metadata.siteAuthor}`,
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: this.$static.metadata.siteTitle },
+        {
+          property: 'og:description',
+          content: this.$static.metadata.siteDescription,
+        },
+        {
+          property: 'og:url',
+          content: process.env.GRIDSOME_BASE_URL,
+        },
+        {
+          property: 'og:image',
+          content: `${process.env.GRIDSOME_BASE_URL}/images/default-thumb.png`,
+        },
+        {
+          property: 'og:image:secure_url',
+          content: `${process.env.GRIDSOME_BASE_URL}/images/default-thumb.png`,
+        },
+      ],
     }
   },
 
