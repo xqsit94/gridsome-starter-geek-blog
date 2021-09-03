@@ -99,12 +99,12 @@
           :class="isOpen ? 'block' : 'hidden'"
           data-cypress="menu"
         >
-          <li>
+          <li v-for="menuItem in menuItems" :key="menuItem.key">
             <g-link
-              to="/blog"
+              :to="menuItem.to"
               class="text-copy-primary hover:text-gray-600"
-              data-cypress="blog"
-              >Blog</g-link
+              :data-cypress="menuItem.key"
+              >{{ menuItem.name }}</g-link
             >
           </li>
           <li class="mb-6 lg:mb-0">
@@ -146,6 +146,11 @@ export default {
     return {
       theme: '',
       isOpen: false,
+      menuItems: [{
+        key: 'blog',
+        name: 'Blog',
+        to: '/blog/'
+      }]
     }
   },
   methods: {
