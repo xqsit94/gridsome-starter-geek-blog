@@ -84,6 +84,10 @@ a:hover {
     @apply text-primary-600;
 }
 
+.markdown-body a {
+    @apply font-medium;
+}
+
 nav .active {
     font-weight: bold;
     @apply border-black border-b;
@@ -149,4 +153,15 @@ nav .active {
 
 .text-menu {
     color: var(--text-menu);
+}
+
+/* Overwriting github markdown */
+.dark .markdown-body p code {
+    background-color: #f49bb91a !important;
+    color: #ef6191;
+}
+
+.light .markdown-body p code {
+    background-color: #f49bb938 !important;
+    color: #ee477f;
 }
