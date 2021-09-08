@@ -33,7 +33,7 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'Material-Theme-Palenight', skipInline: true },
+            { theme: 'css-variables', skipInline: true },
           ],
         ],
       },
@@ -127,7 +127,7 @@ module.exports = {
       plugins: [
         [
           'gridsome-plugin-remark-shiki',
-          { theme: 'Material-Theme-Palenight', skipInline: true },
+          { theme: 'css-variables', skipInline: true },
         ],
         ['remark-attr'],
       ],

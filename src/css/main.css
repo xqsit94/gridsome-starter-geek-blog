@@ -17,6 +17,18 @@
     --border-color-primary: #d6d6d6;
 
     --headings: #363636;
+
+    --shiki-color-text: #3e4a50;
+    --shiki-color-background: #f6f6f6;
+    --shiki-token-constant: #682ac1;
+    --shiki-token-string: #a5b313;
+    --shiki-token-comment: #43454c;
+    --shiki-token-keyword: #c61e80;
+    --shiki-token-parameter: #FFB86C;
+    --shiki-token-function: #2bb64d;
+    --shiki-token-string-expression: #a12e70;
+    --shiki-token-punctuation: #785ba1;
+    --shiki-token-link: #4899aa;
 }
 
 .light .search-highlighted {
@@ -54,6 +66,18 @@
     --border-color-primary:  #6b6b6b;
 
     --headings: #e2e2e2;
+
+    --shiki-color-text: #f6f6f4;
+    --shiki-color-background: #262f3d;
+    --shiki-token-constant: #bf9eee;
+    --shiki-token-string: #e7ee98;
+    --shiki-token-comment: #7b7f8b;
+    --shiki-token-keyword: #d9526d;
+    --shiki-token-parameter: #FFB86C;
+    --shiki-token-function: #62e884;
+    --shiki-token-string-expression: #f286c4;
+    --shiki-token-punctuation: #bf9eee;
+    --shiki-token-link: #97e1f1;
 }
 
 .dark .markdown-body {
