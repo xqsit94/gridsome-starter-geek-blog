@@ -12,8 +12,9 @@
           [`depth-${heading.depth}`]: true,
         }"
       >
-        <g-link
-          :to="`${page.path}${heading.anchor}`"
+        <a
+          href="#"
+          @click.prevent="$scrollTo(heading.anchor)"
           class="
             relative
             flex
@@ -51,7 +52,7 @@
             }"
           ></span>
           {{ heading.value }}
-        </g-link>
+        </a>
       </li>
     </ul>
   </div>

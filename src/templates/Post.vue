@@ -26,7 +26,7 @@
           :src="$page.post.thumbnail.src"
         />
         <h1 class="text-4xl font-bold leading-tight">{{ $page.post.title }}</h1>
-        <div class="text-xl text-gray-400 mt-2 mb-4">
+        <div class="text-xl text-gray-400 mt-2 mb-8">
           <g-link
             v-if="parentCategoryPath($page.post.categories)"
             :to="parentCategoryPath($page.post.categories)"

@@ -6,6 +6,7 @@ import GlobalMixin from '~/mixins/GlobalMixin'
 import Vssue from 'vssue'
 import Fuse from 'fuse.js'
 import GithubV4 from '@vssue/api-github-v4'
+import VueScrollTo from 'vue-scrollto/vue-scrollto'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -20,6 +21,7 @@ export default function (Vue, { router, head, isClient }) {
     })
   }
 
+  Vue.use(VueScrollTo)
   Vue.use(Vssue, {
     api: GithubV4,
     owner: process.env.GRIDSOME_VSSUE_OWNER,
