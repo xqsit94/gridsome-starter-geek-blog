@@ -1,6 +1,6 @@
 <template>
   <div class="my-4">
-    <p class="text-base font-semibold pb-5">Table of content</p>
+    <p class="text-xl font-semibold pb-5">Table of content</p>
     <ul>
       <li
         v-for="(heading, index) in headings"
@@ -8,7 +8,7 @@
         :class="{
           'border-t border-dashed border-ui-border border-gray-500 dark:border-gray-600 pt-2 mt-2':
             index > 0 && heading.depth === 2,
-          'font-semibold': heading.depth === 2,
+          'font-light': heading.depth === 2,
           [`depth-${heading.depth}`]: true,
         }"
       >
@@ -23,13 +23,14 @@
             transition
             transform
             hover:translate-x-1
+            font-normal
           "
           :class="{
             'pl-2': heading.depth === 3,
             'pl-3': heading.depth === 4,
             'pl-4': heading.depth === 5,
             'pl-5': heading.depth === 6,
-            'font-bold text-secondary-500': activeAnchor === heading.anchor,
+            'font-semibold text-secondary-500': activeAnchor === heading.anchor,
           }"
         >
           <span

@@ -53,8 +53,8 @@
     -webkit-text-size-adjust: 100%;
     color: #24292e;
     line-height: 1.5;
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    word-spacing: 0.1rem;
     word-wrap: break-word;
 }
 
@@ -370,7 +370,7 @@
 
 .markdown-body code,
 .markdown-body pre {
-    font-family: monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 12px;
 }
 
@@ -678,7 +678,7 @@
 .markdown-body code {
     background-color: rgba(27,31,35,.05);
     border-radius: 3px;
-    font-size: 85%;
+    font-size: 0.9rem;
     margin: 0;
     padding: .2em .4em;
 }
@@ -690,11 +690,12 @@
 .markdown-body pre>code {
     background: transparent;
     border: 0;
-    font-size: 100%;
+    font-size: 0.95rem;
     margin: 0;
     padding: 0;
     white-space: pre;
     word-break: normal;
+    word-spacing: 0.1rem;
 }
 
 .markdown-body .highlight {
@@ -710,7 +711,7 @@
 .markdown-body pre {
     background-color: #f6f8fa;
     border-radius: 3px;
-    font-size: 75%;
+    font-size: 0.8rem;
     line-height: 1.5;
     overflow: auto;
     padding: 16px;
