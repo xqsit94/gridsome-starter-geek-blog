@@ -22,7 +22,7 @@
         "
       >
         <div class="site-logo">
-          <g-link to="/" @click.native="scrollToTop">
+          <g-link to="/">
             <site-logo></site-logo>
           </g-link>
         </div>
@@ -156,9 +156,6 @@ export default {
     }
   },
   methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0)
-    },
     toggle() {
       this.isOpen = !this.isOpen
     },
