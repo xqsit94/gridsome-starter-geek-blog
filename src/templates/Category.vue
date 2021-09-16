@@ -4,7 +4,7 @@
       <div class="container mx-auto py-8">
         <h2 class="heading mb-5">Category: {{ $page.category.id }}</h2>
         <div class="flex flex-wrap">
-          <div class="w-full md:w-2/3 flex flex-col">
+          <div class="w-full md:w-2/3 flex flex-col pr-0 md:pr-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div
                 v-for="post in $page.category.belongsTo.edges"

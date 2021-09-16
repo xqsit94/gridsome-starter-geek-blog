@@ -210,6 +210,8 @@ export default {
         { property: 'og:updated_time', content: this.$page.post.date },
         { property: 'og:image', content: this.getThumbnailImage },
         { property: 'og:image:secure_url', content: this.getThumbnailImage },
+        { property: 'og:image:width', content: '912' },
+        { property: 'og:image:height', content: '513' },
       ],
     }
   },

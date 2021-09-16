@@ -2,7 +2,7 @@
   <Layout>
     <section class="body-font">
       <div class="container mx-auto flex flex-wrap py-8">
-        <div class="w-full md:w-2/3 flex flex-col">
+        <div class="w-full md:w-2/3 flex flex-col pr-0 md:pr-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div v-for="post in $page.posts.edges" :key="post.id">
               <post-card :post="post"></post-card>

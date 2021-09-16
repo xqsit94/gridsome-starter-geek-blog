@@ -11,7 +11,7 @@
 - [x] [Blog Post](blog)
 - [x] [Pages](docs)
 - [x] Taxonomies: Categories and Tags
-- [x] Featured Image
+- [x] Featured Image (recommended size 16:9 ratio)
 - [x] Code Syntax Highlighter ([shikijs](https://github.com/shikijs/shiki))
 - [x] Global Search for Posts and Pages ([fuse.js](https://fusejs.io/))
 - [x] Post Excerpt
