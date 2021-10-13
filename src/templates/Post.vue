@@ -13,6 +13,7 @@
           border-r-1 border-gray-300
           dark:border-gray-700
         "
+        aria-label="left-sidebar"
       >
         <div class="w-full flex flex-col sticky top-5">
           <table-of-content />
@@ -122,6 +123,7 @@
           border-gray-300
           dark:border-gray-700
         "
+        aria-label="right-sidebar"
       >
         <app-sidebar />
       </aside>

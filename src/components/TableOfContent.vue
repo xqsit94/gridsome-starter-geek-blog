@@ -125,8 +125,8 @@ export default {
         '.markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6'
       )
 
-      for (let i = 0; i < elements.length; i++) {
-        this.observer.observe(elements[i])
+      for (const element of elements) {
+        this.observer.observe(element)
       }
     },
   },
