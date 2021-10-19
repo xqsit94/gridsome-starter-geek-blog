@@ -5,10 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: process.env.SITE_NAME || 'Geek Blog',
+  siteName: process.env.SITE_NAME || 'Gridsome Geek Blog',
   siteDescription:
     process.env.SITE_DESCRIPTION ||
-    'Geek Blog covers Technologies, Apps, Games, Tips and Tricks, How to, Linux, Windows, Blogging, Programming etc.',
+    'Gridsome Geek Blog covers Technologies, Apps, Games, Tips and Tricks, How to, Linux, Windows, Blogging, Programming etc.',
   siteUrl: process.env.GRIDSOME_BASE_URL || 'https://xqsit94.github.com',
   icon: {
     favicon: {

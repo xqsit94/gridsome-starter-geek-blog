@@ -1,46 +1,18 @@
-# Geek Blog
+---
+title: Installation of Grdisome Geek Blog
+path: /installation
+date: 2021-10-19
+summary: There are several ways to install this boilerplate.
+tags: ['installation']
+categories: ['installation']
+thumbnail: ./installation.jpg
+---
 
-> Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for writing content
-
-## Built with
-- [Gridsome 0.7](https://gridsome.org/)
-- [Windi CSS 3](https://windicss.org/) (top of Tailwind CSS v2)
-
-## Features
-- [x] Markdown Parser (for creating post and pages)
-- [x] [Blog Post](blog)
-- [x] [Pages](docs)
-- [x] Taxonomies: Categories and Tags
-- [x] Featured Image (recommended size 16:9 ratio)
-- [x] Code Syntax Highlighter ([shikijs](https://github.com/shikijs/shiki))
-- [x] Global Search for Posts and Pages ([fuse.js](https://fusejs.io/))
-- [x] Post Excerpt
-- [x] Recent Post
-- [x] Related Post
-- [x] Approximate read time for posts
-- [x] Pagination for Blog, Tags, Categories
-- [x] Github Comments (issue based) ([VSSUE](https://github.com/meteorlxy/vssue))
-- [x] SEO Friendly
-- [x] Sitemap
-- [x] RSS Feed
-- [x] TOC
-- [x] Google Analytics
-- and more in future maybe 🥳
-
-## Todo
-- VSSUE update css for dark theme support (pull-request is appreciated 😝 )
-- Update README.md with Installation
-
-## Demo URL
-https://gridsome-geek-blog.netlify.app
-or check my blog
-https://codedine.com
-
-# Installation
+## Installation
 
 There are several ways to to install this theme.
 
-## Using the Gridsome CLI
+### Using the Gridsome CLI
 
 The easiest way to install this theme or a Gridsome theme in general is by using their CLI tool.
 
@@ -62,7 +34,7 @@ This command creates a folder named `your-project-name` in your current working 
 
 If everything is downloaded and installed you can now run `npm run develop` which starts the development server and bundles all assets. After bootstrapping has finished, head to `http://localhost:8080` to view your freshly created site!
 
-## Installing manually
+### Installing manually
 
 To install this theme manually you need to:
 
