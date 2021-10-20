@@ -16,7 +16,7 @@ module.exports = function (api) {
     addMetadata('siteAuthor', process.env.SITE_AUTHOR || 'xqsit94')
     addMetadata(
       'siteAuthorUrl',
-      process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94"'
+      process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94'
     )
 
     const category = addCollection('Category')
