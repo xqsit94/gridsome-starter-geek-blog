@@ -32,8 +32,6 @@
 
 ## Demo URL
 https://gridsome-geek-blog.netlify.app
-or check my blog
-https://codedine.com
 
 # Installation
 
@@ -45,6 +43,11 @@ The easiest way to install this theme or a Gridsome theme in general is by using
 
 If you don't already have it installed, simply run:
 
+```bash
+yarn global add @gridsome/cli
+```
+
+or using npm:
 ```bash
 npm i -g @gridsome/cli
 ```
@@ -59,7 +62,7 @@ gridsome create your-project-name https://github.com/xqsit94/gridsome-geek-blog
 
 This command creates a folder named `your-project-name` in your current working directory, clones the repository and automatically installs the dependencies.
 
-If everything is downloaded and installed you can now run `npm run develop` which starts the development server and bundles all assets. After bootstrapping has finished, head to `http://localhost:8080` to view your freshly created site!
+If everything is downloaded and installed you can now run `gridsome develop` which starts the development server and bundles all assets. After bootstrapping has finished, head to `http://localhost:8080` to view your freshly created site!
 
 ## Installing manually
 
@@ -82,17 +85,17 @@ cd gridsome-geek-blog
 
 Now you only need to install the dependencies.
 
-Using npm:
-```bash
-npm install
-```
-
-Or by using yarn:
+Using yarn:
 ```bash
 yarn
 ```
 
-After all dependencies are installed you can now run `npm run develop` to start the development server!
+Or by using npm:
+```bash
+npm install
+```
+
+After all dependencies are installed you can now run `yarn develop` if you're using yarn or `npm run develop` if you are using npm to start the development server!
 
 ## Configuring Environmental Variables
 This boilerplate helps to configure important data using `.env`. All you need to do is just copy `.env.example` to `.env`
