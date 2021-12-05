@@ -47,7 +47,7 @@ This seems to be a must have for any site in current year. Click the icon at the
 
 ## TailwindCSS
 
-This starter uses [Windi](https://https://windicss.org) + [TailwindCSS](https://tailwindcss.com/) for layout and styling. You can easily configure it by editing the `tailwind.config.js` file. [PurgeCSS](https://purgecss.com/) is included as well to keep the bundle size as low as possible and the website fast and snappy!
+This starter uses [Windi](https://windicss.org) + [TailwindCSS](https://tailwindcss.com/) for layout and styling. You can easily configure it by editing the `tailwind.config.js` file. [PurgeCSS](https://purgecss.com/) is included as well to keep the bundle size as low as possible and the website fast and snappy!
 
 ## Changing Colors
 
