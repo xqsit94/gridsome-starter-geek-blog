@@ -1,11 +1,13 @@
 <div align="center">
-    <h2>Geek Blog</h2>
+    <h1>Geek Blog</h1>
     <a href="https://sonarcloud.io/summary/new_code?id=xqsit94_geek-blog"><img src="https://sonarcloud.io/api/project_badges/measure?project=xqsit94_geek-blog&metric=alert_status" alt="Quality Gate"></a>
     <a href="https://github.com/xqsit94/gridsome-starter-geek-blog/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/xqsit94/gridsome-starter-geek-blog?color=green&logo=github"></a>
     <a href="https://github.com/xqsit94/gridsome-starter-geek-blog/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen"></a>
 </div>
 
-> Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for writing content
+## About
+
+Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for writing content
 
 ## Built with
 - [Gridsome 0.7](https://gridsome.org/)
