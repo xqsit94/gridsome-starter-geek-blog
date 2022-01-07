@@ -18,6 +18,16 @@ module.exports = function (api) {
       'siteAuthorUrl',
       process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94'
     )
+    addMetadata(
+      'archive_title',
+      process.env.ARCHIVE_TITLE ||
+        'NOTE: THIS ARTICLE IS PART OF OUR ARCHIVE AND IS LIKELY OUT OF DATE.'
+    )
+    addMetadata(
+      'archive_text',
+      process.env.ARCHIVE_TEXT ||
+        '(LINKS MAY NOT WORK, DOWNLOADS HAVE NOT BEEN RECENTLY TESTED FOR SAFETY)'
+    )
 
     const category = addCollection('Category')
     category.addReference('categories', 'Category')
