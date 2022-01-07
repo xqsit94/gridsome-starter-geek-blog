@@ -137,6 +137,7 @@ query Search {
         path
         title
         summary
+        is_archived
         thumbnail
         categories {
           id

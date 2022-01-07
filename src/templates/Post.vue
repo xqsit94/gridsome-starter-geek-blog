@@ -41,6 +41,15 @@
           </span>
           -️ {{ $page.post.date }}
         </div>
+        <div
+          v-if="$page.post.is_archived"
+          class="border border-dashed mb-6 p-5 text-center border-secondary-500"
+        >
+          <div class="text-lg text-secondary-500">
+            {{ $static.metadata.archive_title }}
+          </div>
+          <span class="text-xs">{{ $static.metadata.archive_text }}</span>
+        </div>
         <div class="markdown-body mb-8" v-html="$page.post.content" />
         <div class="flex mb-8 text-sm">
           <g-link
@@ -136,6 +145,7 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     summary
+    is_archived
     thumbnail
     path
     date (format: "MMMM D, Y")
@@ -170,6 +180,8 @@ query {
     siteTitle
     siteDescription
     siteAuthor
+    archive_title
+    archive_text
   }
 }
 </static-query>
@@ -183,7 +195,7 @@ export default {
         {
           key: 'description',
           name: 'description',
-          content: this.$page.post.summary,
+          content: this.$page.post.summary
         },
         { name: 'description', content: this.$page.post.summary },
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -191,30 +203,30 @@ export default {
         { name: 'twitter:title', content: this.$page.post.title },
         {
           name: 'twitter:site',
-          content: `@${this.$static.metadata.siteAuthor}`,
+          content: `@${this.$static.metadata.siteAuthor}`
         },
         { name: 'twitter:image', content: this.getThumbnailImage },
         {
           name: 'twitter:creator',
-          content: `@${this.$static.metadata.siteAuthor}`,
+          content: `@${this.$static.metadata.siteAuthor}`
         },
         { property: 'og:type', content: 'article' },
         { property: 'og:title', content: this.$page.post.title },
         { property: 'og:description', content: this.$page.post.summary },
         {
           property: 'og:url',
-          content: `${this.getBaseUrl}${this.$page.post.path}/`,
+          content: `${this.getBaseUrl}${this.$page.post.path}/`
         },
         {
           property: 'article:published_time',
-          content: this.$page.post.date,
+          content: this.$page.post.date
         },
         { property: 'og:updated_time', content: this.$page.post.date },
         { property: 'og:image', content: this.getThumbnailImage },
         { property: 'og:image:secure_url', content: this.getThumbnailImage },
         { property: 'og:image:width', content: '912' },
-        { property: 'og:image:height', content: '513' },
-      ],
+        { property: 'og:image:height', content: '513' }
+      ]
     }
   },
 
@@ -222,7 +234,7 @@ export default {
     AppSidebar: () => import('~/components/parts/AppSidebar'),
     RelatedPost: () => import('~/components/RelatedPost'),
     PostComment: () => import('~/components/PostComment'),
-    TableOfContent: () => import('~/components/TableOfContent'),
+    TableOfContent: () => import('~/components/TableOfContent')
   },
 
   computed: {
@@ -236,8 +248,8 @@ export default {
     },
     getBaseUrl() {
       return process.env.GRIDSOME_BASE_URL
-    },
-  },
+    }
+  }
 }
 </script>
 

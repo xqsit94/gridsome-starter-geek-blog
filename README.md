@@ -32,6 +32,7 @@ Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for wri
 - [x] RSS Feed
 - [x] TOC
 - [x] Google Analytics
+- [x] [Archive Post](blog/2021-10-18-archived.md)
 - and more in future maybe 🥳
 
 ## Todo
