@@ -36,4 +36,19 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
+
+  api.loadSource(({ addSchemaResolvers }) => {
+    // Schema API here: https://gridsome.org/docs/schema-api/
+    // Create a default value for "sidebar" to prevent Cannot query errors if not used
+    addSchemaResolvers({
+      Post: {
+        sidebar: {
+          type: 'String',
+          resolve(obj) {
+            return (obj.sidebar === undefined ? 'Default' : obj.sidebar)
+          }
+        }
+      }
+    })
+  })
 }

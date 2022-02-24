@@ -134,7 +134,7 @@
         "
         aria-label="right-sidebar"
       >
-        <app-sidebar />
+        <app-sidebar :sidebar="$page.post.sidebar" />
       </aside>
     </div>
   </Layout>
@@ -146,6 +146,7 @@ query Post ($path: String!) {
     title
     summary
     is_archived
+    sidebar
     thumbnail
     path
     date (format: "MMMM D, Y")
