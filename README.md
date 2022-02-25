@@ -33,6 +33,7 @@ Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for wri
 - [x] TOC
 - [x] Google Analytics
 - [x] [Archive Post](blog/2021-10-18-archived.md)
+- [x] [Dynamic Sidebar Component](https://github.com/xqsit94/gridsome-starter-geek-blog/pull/6) (by [@neilherbertuk](https://github.com/neilherbertuk))
 - and more in future maybe 🥳
 
 ## Todo
