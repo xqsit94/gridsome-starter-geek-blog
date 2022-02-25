@@ -29,4 +29,17 @@ export default function (Vue, { router, head, isClient }) {
     perPage: process.env.VSSUE_GRIDSOME_PERPAGE || 15,
     autoCreateIssue: process.env.GRIDSOME_VSSUE_OWNER || false,
   })
+
+  // Add vue filter to capitalise the first letter of each word
+  Vue.filter('capitalise', function (value) {
+      let output = []
+      value.split(' ').forEach(word => {
+        output.push(
+          word.charAt(0).toUpperCase() +
+          word.slice(1).toLowerCase()
+        )
+      })
+      return output.join(' ')
+    }
+  )
 }

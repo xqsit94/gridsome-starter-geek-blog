@@ -31,7 +31,7 @@
             dark:border-gray-700
           "
         >
-          <app-sidebar />
+          <app-sidebar sidebar="Categories" />
         </aside>
       </div>
     </section>
