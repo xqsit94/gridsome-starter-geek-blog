@@ -1,5 +1,5 @@
 ---
-title: Installation of Grdisome Geek Blog
+title: Installation of Gridsome Geek Blog
 path: /installation
 date: 2021-10-19
 summary: There are several ways to install this boilerplate.
@@ -10,7 +10,7 @@ thumbnail: ./installation.jpg
 
 ## Installation
 
-There are several ways to to install this theme.
+There are several ways to install this theme.
 
 ### Using the Gridsome CLI
 
