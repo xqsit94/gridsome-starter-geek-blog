@@ -1,5 +1,6 @@
 ---
 title: Installation of Gridsome Geek Blog
+cover_title: Installation
 path: /installation
 date: 2021-10-19
 summary: There are several ways to install this boilerplate.

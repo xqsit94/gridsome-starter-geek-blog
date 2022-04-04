@@ -4,6 +4,19 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const fs = require("fs-extra")
+const generateCover = require("./src/functions/generate-cover")
+const coverOptions = {
+  imgWidth: "1024",
+  imgHeight: "576",
+  types: [
+    {
+      name:     "Posts",
+      typeName: "Post",
+      path:     "blog"
+    }
+  ]
+}
 
 module.exports = function (api) {
   api.loadSource(({ addMetadata, addCollection }) => {
@@ -49,6 +62,29 @@ module.exports = function (api) {
           }
         }
       }
+    })
+  })
+  api.loadSource(async (actions) => {
+   // Loop through each type to create a cover image for
+    coverOptions.types.forEach(function(type){
+      console.log("Generating cover images for " + type.name)
+      const collection = actions.getCollection(type.typeName)
+      const outputPath = `${type.path}`
+      fs.ensureDirSync(outputPath)
+      collection.data().forEach(function(node){
+        if (node.internal.typeName === type.typeName) {
+          const imageName = node.fileInfo.name
+	  const output = (node.thumbnail ? `${node.thumbnail}` : `${outputPath}/${imageName}.png`)
+          fs.access(output, (error) => {
+            if (error) {
+              console.log(`Creating ${output}`)
+              generateCover(output, node.cover_title ?? node.title, coverOptions)
+            } else {
+              console.log(`${output} already exists`)
+            }
+          })
+        }
+      })
     })
   })
 }
