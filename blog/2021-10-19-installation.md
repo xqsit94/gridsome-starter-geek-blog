@@ -6,7 +6,7 @@ date: 2021-10-19
 summary: There are several ways to install this boilerplate.
 tags: ['installation']
 categories: ['installation']
-thumbnail: ./installation.jpg
+thumbnail: ./installation.png
 ---
 
 ## Installation
