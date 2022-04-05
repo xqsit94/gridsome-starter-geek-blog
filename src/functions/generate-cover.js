@@ -4,22 +4,14 @@ const tinycolor = require("tinycolor2")
 module.exports = async function(
   output,
   cover_title,
-  { imgHeight, imgWidth }
+  { imgHeight, imgWidth, colours }
 ) {
-  // Set Colours
-  const colours = [
-    "#559BFF",
-    "#FFD948",
-    "#CD1FFF",
-    "#41FFA7",
-    "#FF6336",
-    "#FF4576"
-  ]
+
   console.log("Picking a main colour")
-  // Use a colour from the array above
-  //const mainColour = colours.random()
-  // or select a random colour
   const mainColour = randomColour()
+  if (colours !== undefined && colours.constructor === Array) {
+    const mainColour = colours.random()
+  }
   console.log("Main Colour: " + mainColour)
   console.log("Generating gradient")
   const firstColour = tinycolor(mainColour).darken(25).toString()
