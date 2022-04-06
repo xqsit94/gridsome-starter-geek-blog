@@ -8,9 +8,9 @@ module.exports = async function(
 ) {
 
   console.log("Picking a main colour")
-  const mainColour = randomColour()
+  let mainColour = randomColour()
   if (colours !== undefined && colours.constructor === Array) {
-    const mainColour = colours.random()
+    mainColour = colours.random()
   }
   console.log("Main Colour: " + mainColour)
   console.log("Generating gradient")
@@ -28,7 +28,8 @@ module.exports = async function(
   const titleStroke = (tinycolor(mainColour).isLight() ? '-webkit-text-stroke: 0.5px black;' : '-webkit-text-stroke: 0.5px white;')
 
   console.log("Calculating font size for title")
-  const titleFontSize = (cover_title.length > 30 ? '2.7rem' : (cover_title.length > 24 ? '3.2rem' : '4.0rem'))
+
+  const titleFontSize = getFontSize(cover_title)
   console.log("Font Size: " + titleFontSize)
 
   const template = `
@@ -230,4 +231,9 @@ const randomColour = () => {
     hexCode += hexString[Math.floor(Math.random() * hexString.length)];
   }
   return hexCode
+}
+
+// Generate the font size to use for the cover title
+const getFontSize = (cover_title) => {
+  return cover_title.length > 30 ? '2.7rem' : (cover_title.length > 24 ? '3.2rem' : '4.0rem');
 }

@@ -52,7 +52,7 @@ const coverOptions = {
 
 ### Base Background Colour
 
-By default, a random base colour is used. However, you may provide coverOptions.colours with an array of 1 to many hex colours. If an array is provided, a colour will be picked at random.
+By default, a random base colour is used. However, you may provide `coverOptions.colours` with an array of 1 to many hex colours. If an array is provided, a colour will be picked at random.
 
 ```javascript
 const coverOptions = {

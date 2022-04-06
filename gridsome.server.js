@@ -85,7 +85,6 @@ module.exports = function (api) {
         fs.ensureDirSync(outputPath)
         collection.data().forEach(function (node) {
           if (node.internal.typeName === type.typeName) {
-            const imageName = node.fileInfo.name
             if (node.thumbnail !== undefined) {
               const output = `${node.thumbnail}`
               fs.access(output, (error) => {
