@@ -3,7 +3,7 @@ const tinycolor = require("tinycolor2")
 
 module.exports = async function(
   output,
-  cover_title,
+  coverTitle,
   { imgHeight, imgWidth, colours }
 ) {
 
@@ -24,12 +24,12 @@ module.exports = async function(
   console.log("Gradient: " + gradient)
   console.log("Generating title colours")
   const titleBG = tinycolor(mainColour).setAlpha(0.6).toHexString()
-  const titleText = '#fff'
-  const titleStroke = (tinycolor(mainColour).isLight() ? '-webkit-text-stroke: 0.5px black;' : '-webkit-text-stroke: 0.5px white;')
+  const titleText = "#fff"
+  const titleStroke = (tinycolor(mainColour).isLight() ? "-webkit-text-stroke: 0.5px black;" : "-webkit-text-stroke: 0.5px white;")
 
   console.log("Calculating font size for title")
 
-  const titleFontSize = getFontSize(cover_title)
+  const titleFontSize = getFontSize(coverTitle)
   console.log("Font Size: " + titleFontSize)
 
   const template = `
@@ -205,7 +205,8 @@ module.exports = async function(
           <div class="triangle"></div>
           <div class="star"></div>
           <div class="titlecontainer">
-              <h1 class="title">${cover_title}</h1>
+          <div class="titlecontainer">
+              <h1 class="title">${coverTitle}</h1>
           </div>
         </div>
       </body>
@@ -223,7 +224,7 @@ Array.prototype.random = function(){
   return this[Math.floor(Math.random()*this.length)];
 }
 
-// Generate a random kex colour
+// Generate a random hex colour
 const randomColour = () => {
   const hexString = "0123456789abcdef"
   let hexCode = "#"
@@ -234,6 +235,11 @@ const randomColour = () => {
 }
 
 // Generate the font size to use for the cover title
-const getFontSize = (cover_title) => {
-  return cover_title.length > 30 ? '2.7rem' : (cover_title.length > 24 ? '3.2rem' : '4.0rem');
+const getFontSize = (coverTitle) => {
+  let fontSize = "4.0rem"
+  if (coverTitle.length > 30)
+    fontSize = "2.7rem"
+  if (coverTitle.length > 24)
+    fontSize = "3.2rem"
+  return fontSize
 }
