@@ -5,6 +5,30 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// Include files and configuration needed for cover image generator
+const fs = require("fs-extra")
+const generateCover = require("./src/functions/generate-cover")
+const coverOptions = {
+  imgWidth: "1024",
+  imgHeight: "576",
+  types: [
+    {
+      name:     "Posts",
+      typeName: "Post",
+      path:     "blog"
+    }
+  ],
+  // Set Colours
+  // colours:  [
+  //   "#559BFF",
+  //   "#FFD948",
+  //   "#CD1FFF",
+  //   "#41FFA7",
+  //   "#FF6336",
+  //   "#FF4576"
+  // ]
+}
+
 module.exports = function (api) {
   api.loadSource(({ addMetadata, addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
@@ -50,5 +74,33 @@ module.exports = function (api) {
         }
       }
     })
+  })
+  api.loadSource(async (actions) => {
+    if (process.env.AUTO_GENERATE_COVER) {
+      // Loop through each type to create a cover image for
+      coverOptions.types.forEach(function (type) {
+        console.log("Generating cover images for " + type.name)
+        const collection = actions.getCollection(type.typeName)
+        const outputPath = `${type.path}`
+        fs.ensureDirSync(outputPath)
+        collection.data().forEach(function (node) {
+          if (node.internal.typeName === type.typeName) {
+            if (node.thumbnail !== undefined) {
+              const output = `${node.thumbnail}`
+              fs.access(output, (error) => {
+                if (error) {
+                  console.log(`Creating ${output}`)
+                  generateCover(output, node.cover_title ?? node.title, coverOptions)
+                } else {
+                  console.log(`${output} already exists`)
+                }
+              })
+            }
+          }
+        })
+      })
+    } else {
+      console.log("If you would like to automatically generate cover images, set AUTO_GENERATE_COVER in your env file to true.")
+    }
   })
 }

@@ -23,7 +23,9 @@
     "gridsome-plugin-remark-shiki": "https://github.com/EldoranDev/gridsome-plugin-remark-shiki",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-rss": "^1.2.0",
+    "node-html-to-image": "^3.2.4",
     "remark-attr": "^0.11.1",
+    "tinycolor2": "^1.4.2",
     "vssue": "^1.4.8"
   },
   "devDependencies": {
