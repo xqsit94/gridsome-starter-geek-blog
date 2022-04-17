@@ -34,6 +34,7 @@ Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for wri
 - [x] Google Analytics
 - [x] [Archive Post](blog/2021-10-18-archived.md)
 - [x] [Dynamic Sidebar Component](https://github.com/xqsit94/gridsome-starter-geek-blog/pull/6) (by [@neilherbertuk](https://github.com/neilherbertuk))
+- [x] [Cover Image Generator](https://gridsome-geek-blog.netlify.app/cover-image/) (by [@neilherbertuk](https://github.com/neilherbertuk))
 - and more in future maybe 🥳
 
 ## Todo
@@ -117,6 +118,11 @@ SITE_DESCRIPTION=
 SITE_AUTHOR=
 SITE_AUTHOR_URL=
 SITE_FAVICON_PATH="./static/images/favicon.png"
+
+ARCHIVE_TITLE=
+ARCHIVE_TEXT=
+
+AUTO_GENERATE_COVER=false
 
 GRIDSOME_BASE_URL=http://localhost:8080
 GRIDSOME_VSSUE_OWNER=
