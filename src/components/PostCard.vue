@@ -18,7 +18,7 @@
             ? post.node.thumbnail.src
             : '/images/default-thumb.png'
         "
-        alt="post.node.title"
+        :alt="post.node.title"
       />
     </g-link>
     <div class="p-6">
