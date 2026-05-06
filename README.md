@@ -5,6 +5,13 @@
     <a href="https://github.com/xqsit94/gridsome-starter-geek-blog/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen"></a>
 </div>
 
+> [!WARNING]
+> **This project is unmaintained and archived.**
+>
+> [Gridsome](https://gridsome.org) itself is no longer actively maintained — the last release was in 2021 and the project has effectively been abandoned. As a result, this starter is no longer receiving updates or bug fixes either.
+>
+> If you're starting a new blog, consider modern alternatives such as [Astro](https://astro.build), [Next.js](https://nextjs.org), [Nuxt Content](https://content.nuxt.com), or [VitePress](https://vitepress.dev).
+
 ## About
 
 Geek blog built with [Gridsome](https://gridsome.org) that uses Markdown for writing content
